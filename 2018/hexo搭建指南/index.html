@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="一直想自己搭建一个博客，最近在空闲的时候陆陆续续搞了几天终于基本成功了，操作系统为Windows 7 64位。由于安装的时候没有截图，所以安装过程主要是文字，图片可以在最后的参考链接中看到一部分，希望可以给大家一些帮助。 我的搭建流程主要分以下几步：  在本地创建好博客文件并上传到github上，这样就可以在github上浏览自己的博客啦 包括安装Node.js, git，hexo，注册githu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-07T03:15:18.133Z">
+<meta property="og:updated_time" content="2018-09-07T05:05:14.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客搭建（一）hexo + github 创建博客">
 <meta name="twitter:description" content="一直想自己搭建一个博客，最近在空闲的时候陆陆续续搞了几天终于基本成功了，操作系统为Windows 7 64位。由于安装的时候没有截图，所以安装过程主要是文字，图片可以在最后的参考链接中看到一部分，希望可以给大家一些帮助。 我的搭建流程主要分以下几步：  在本地创建好博客文件并上传到github上，这样就可以在github上浏览自己的博客啦 包括安装Node.js, git，hexo，注册githu">
@@ -347,7 +347,8 @@
 <p>生成静态页面</p>
 <p><code>hexo generate</code>（hexo g也可以）</p>
 <p>至此，本地博客已经创建完成。</p>
-<h1 id="创建github页面"><a href="#创建github页面" class="headerlink" title="创建github页面"></a>创建github页面</h1><p>在<a href="https://github.com/" target="_blank" rel="noopener">Github</a>上申请一个帐号，然后先配置SSH key，这样以后本地写好博客上传的时候就不需要帐号密码了。</p>
+<h1 id="创建github页面"><a href="#创建github页面" class="headerlink" title="创建github页面"></a>创建github页面</h1><p>##建立Github项目<br>在<a href="https://github.com/" target="_blank" rel="noopener">Github</a>上申请一个帐号，然后新建一个项目（repository），项目名为<code>申请的账户名.github.io</code>。</p>
+<p>##配置SSH<br>配置SSH key，这样以后本地写好博客上传的时候就不需要帐号密码了。</p>
 <p>在自己的用户目录下（一般为<code>C:\Users\你的用户名</code>）打开命令窗口，保证当前路径在用户目录下。在命令窗口中输入</p>
 <p><code>ssh-keygen -t rsa -C &quot;xxxxxx@yy.com&quot;</code> 邮箱名替换为自己的邮箱</p>
 <p>然后用户目录下就会出现<code>.ssh</code>文件夹，进入文件夹中，打开id_rsa.pub文件（我是用Notepad++打开的），全选复制公钥内容。</p>
@@ -358,17 +359,21 @@
 <p><code>git config --global user.email “your_registered_github_Email”</code>  替换成自己的邮箱地址(建议用注册giuhub的邮箱)</p>
 <p>配置后，在命令行窗口中输入</p>
 <p><code>ssh -T git@github.com</code></p>
-<p>即可测试ssh是否配置成功</p>
+<p>跳出</p>
+<p><code>Are you sure you want to continue connecting (yes/no)?</code></p>
+<p>的时候，输入yes，出现</p>
+<p><code>Hi xxx! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></p>
+<p>后，说明设置成功。</p>
+<h2 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h2><p>在自己创建的文件夹中，找到_config.yml文件，修改最后的deploy部分为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:Code4Today/Code4Today.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>然后安装一个扩展，在命令行窗口中输入</p>
+<p><code>npm install hexo-deployer-git --save</code></p>
+<p>安装完成后，使用命令</p>
+<p><code>hexo d -g</code></p>
+<p>即可完成博客的生成与部署了</p>
+<p>###参考网页：</p>
 <blockquote>
-<p>$ ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p>
-</blockquote>
-<p>The authenticity of host ‘github.com (192.30.252.129)’ can’t be established.</p>
-<p>RSA key fingerprint is xxxx.</p>
-<p>Are you sure you want to continue connecting (yes/no)? yes #确认你是否继续联系，输入yes</p>
-<p>Warning: Permanently added ‘github.com,192.30.252.129’ (RSA) to the list of known hosts.</p>
-<p>Enter passphrase for key ‘/c/Users/xxxx_000/.ssh/id_rsa’:  #生成ssh kye是密码为空则无此项，若设置有密码则有此项且，输入生成ssh key时设置的密码即可。</p>
-<p>Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. #出现词句话，说明设置成功。</p>
 <p><a href="https://www.jianshu.com/p/465830080ea9" target="_blank" rel="noopener">https://www.jianshu.com/p/465830080ea9</a><br><a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/7707219.html</a><br><a href="https://www.cnblogs.com/fengxiongZz/p/7707568.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/7707568.html</a><br><a href="https://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html</a></p>
+</blockquote>
 
       
     </div>
@@ -515,7 +520,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#创建本地博客"><span class="nav-number">1.</span> <span class="nav-text">创建本地博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node-js"><span class="nav-number">1.1.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装git"><span class="nav-number">1.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.3.</span> <span class="nav-text">安装hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建github页面"><span class="nav-number">2.</span> <span class="nav-text">创建github页面</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#创建本地博客"><span class="nav-number">1.</span> <span class="nav-text">创建本地博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node-js"><span class="nav-number">1.1.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装git"><span class="nav-number">1.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.3.</span> <span class="nav-text">安装hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建github页面"><span class="nav-number">2.</span> <span class="nav-text">创建github页面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地配置"><span class="nav-number">2.1.</span> <span class="nav-text">本地配置</span></a></li></ol></li></ol></div>
             
 
           </div>
