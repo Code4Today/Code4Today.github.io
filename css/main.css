@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7f3336;
+  background: #7520cb;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1958,7 +1958,8 @@ pre .javascript .function {
   margin: 0 5px;
 }
 .powered-by,
-.theme-info {
+.theme-info,
+.coding-pages {
   display: inline-block;
 }
 .cc-license {
