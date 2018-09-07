@@ -348,8 +348,8 @@
 <p>生成静态页面</p>
 <p><code>hexo generate</code>（hexo g也可以）</p>
 <p>至此，本地博客已经创建完成。</p>
-<h1 id="创建github页面"><a href="#创建github页面" class="headerlink" title="创建github页面"></a>创建github页面</h1><p>##建立Github项目<br>在<a href="https://github.com/" target="_blank" rel="noopener">Github</a>上申请一个帐号，然后新建一个项目（repository），项目名为<code>申请的账户名.github.io</code>。</p>
-<p>##配置SSH<br>配置SSH key，这样以后本地写好博客上传的时候就不需要帐号密码了。</p>
+<h1 id="创建github页面"><a href="#创建github页面" class="headerlink" title="创建github页面"></a>创建github页面</h1><h2 id="建立Github项目"><a href="#建立Github项目" class="headerlink" title="建立Github项目"></a>建立Github项目</h2><p>在<a href="https://github.com/" target="_blank" rel="noopener">Github</a>上申请一个帐号，然后新建一个项目（repository），项目名为<code>申请的账户名.github.io</code>。</p>
+<h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p>配置SSH key，这样以后本地写好博客上传的时候就不需要帐号密码了。</p>
 <p>在自己的用户目录下（一般为<code>C:\Users\你的用户名</code>）打开命令窗口，保证当前路径在用户目录下。在命令窗口中输入</p>
 <p><code>ssh-keygen -t rsa -C &quot;xxxxxx@yy.com&quot;</code> 邮箱名替换为自己的邮箱</p>
 <p>然后用户目录下就会出现<code>.ssh</code>文件夹，进入文件夹中，打开id_rsa.pub文件（我是用Notepad++打开的），全选复制公钥内容。</p>
@@ -371,8 +371,7 @@
 <p>安装完成后，使用命令</p>
 <p><code>hexo d -g</code></p>
 <p>即可完成博客的生成与部署了</p>
-<p>###参考网页：</p>
-<blockquote>
+<h3 id="参考网页："><a href="#参考网页：" class="headerlink" title="参考网页："></a>参考网页：</h3><blockquote>
 <p><a href="https://www.jianshu.com/p/465830080ea9" target="_blank" rel="noopener">https://www.jianshu.com/p/465830080ea9</a><br><a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/7707219.html</a><br><a href="https://www.cnblogs.com/fengxiongZz/p/7707568.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/7707568.html</a><br><a href="https://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html</a></p>
 </blockquote>
 
