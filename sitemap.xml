@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://code4today.xyz/2018/blog3/</loc>
+    
+    <lastmod>2018-10-05T14:48:07.339Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://code4today.xyz/2018/blog2/</loc>
     
     <lastmod>2018-10-05T14:38:23.081Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://code4today.xyz/2018/blog1/</loc>
     
     <lastmod>2018-10-05T14:36:14.214Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://code4today.xyz/2018/blog3/</loc>
-    
-    <lastmod>2018-10-05T14:35:55.922Z</lastmod>
     
   </url>
   
