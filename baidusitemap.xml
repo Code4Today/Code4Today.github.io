@@ -4,27 +4,60 @@
 
     
   <url>
-    <loc>http://code4today.xyz/2018/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88%E4%BA%8C%EF%BC%89NameSilo-dnspod%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</loc>
-    <lastmod>2018-10-05T14:13:16.426Z</lastmod>
+    <loc>http://code4today.xyz/2018/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%89%EF%BC%89%E5%85%B6%E4%BB%96%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2018-10-05T14:32:09.762Z</lastmod>
     <data>
         <display>
-        <title>博客搭建（二）NameSilo+dnspod建立自己的域名</title>
-        <pubTime>2018-10-05T13:47:00.000Z</pubTime>
+        <title>博客搭建（三）其他优化</title>
+        <pubTime>2018-10-05T14:15:00.000Z</pubTime>
         
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
+        <tag>gihub</tag>
+         
          
            
+             
+              <breadCrumb title="博客搭建" url="http://code4today.xyz/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+          
         </display>
     </data>
     </url>
 
     
   <url>
-    <loc>http://code4today.xyz/2018/hexo%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2018-10-05T13:44:07.318Z</lastmod>
+    <loc>http://code4today.xyz/2018/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89hexo%20+%20github%20%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2018-10-05T14:29:48.582Z</lastmod>
     <data>
         <display>
         <title>博客搭建（一）hexo + github 创建博客</title>
         <pubTime>2018-09-07T02:15:06.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>github</tag>
+         
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="博客搭建" url="http://code4today.xyz/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://code4today.xyz/2018/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88%E4%BA%8C%EF%BC%89NameSilo-dnspod%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</loc>
+    <lastmod>2018-10-05T14:13:59.797Z</lastmod>
+    <data>
+        <display>
+        <title>博客搭建（二）NameSilo+dnspod建立自己的域名</title>
+        <pubTime>2018-10-05T13:47:00.000Z</pubTime>
         
         <tag>hexo</tag>
          

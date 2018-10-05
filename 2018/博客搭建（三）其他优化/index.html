@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hexo,blog,gihub," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Code4Today">
-<meta property="og:url" content="http://code4today.xyz/index.html">
+<meta name="description" content="经过了前两个步骤，其实我们已经拥有了自己的博客，用Markdown就可以开始编写自己的博文了。下面是尝试的一些其他优化，由于内容较多，不再一一叙述，大家可以通过链接自行尝试~">
+<meta name="keywords" content="hexo,blog,gihub">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客搭建（三）其他优化">
+<meta property="og:url" content="http://code4today.xyz/2018/博客搭建（三）其他优化/index.html">
 <meta property="og:site_name" content="Code4Today">
+<meta property="og:description" content="经过了前两个步骤，其实我们已经拥有了自己的博客，用Markdown就可以开始编写自己的博文了。下面是尝试的一些其他优化，由于内容较多，不再一一叙述，大家可以通过链接自行尝试~">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-05T14:32:09.762Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Code4Today">
+<meta name="twitter:title" content="博客搭建（三）其他优化">
+<meta name="twitter:description" content="经过了前两个步骤，其实我们已经拥有了自己的博客，用Markdown就可以开始编写自己的博文了。下面是尝试的一些其他优化，由于内容较多，不再一一叙述，大家可以通过链接自行尝试~">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://code4today.xyz/"/>
+  <link rel="canonical" href="http://code4today.xyz/2018/博客搭建（三）其他优化/"/>
 
 
 
 
 
-  <title>Code4Today</title>
+  <title>博客搭建（三）其他优化 | Code4Today</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,9 +282,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -310,9 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/博客搭建（三）其他优化/" itemprop="url">博客搭建（三）其他优化</a></h1>
+          <h1 class="post-title" itemprop="name headline">博客搭建（三）其他优化</h1>
         
 
         <div class="post-meta">
@@ -405,16 +407,41 @@
       
 
       
-        
-          <p>经过了前两个步骤，其实我们已经拥有了自己的博客，用Markdown就可以开始编写自己的博文了。下面是尝试的一些其他优化，由于内容较多，不再一一叙述，大家可以通过链接自行尝试~</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/博客搭建（三）其他优化/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>经过了前两个步骤，其实我们已经拥有了自己的博客，用Markdown就可以开始编写自己的博文了。下面是尝试的一些其他优化，由于内容较多，不再一一叙述，大家可以通过链接自行尝试~</p>
+<a id="more"></a>
+<p>首先我们再次回顾之前讲的搭建博客的步骤：</p>
+<ol>
+<li>在本地创建好博客文件并上传到github上，这样就可以在github上浏览自己的博客啦，<ul>
+<li>包括安装Node.js, git，hexo，注册github帐号等</li>
+</ul>
+</li>
+<li>为自己的博客设置一个域名，这样就可以从个性化的域名里直接访问博客<ul>
+<li>包括域名购买，dns设置，pages设置等</li>
+</ul>
+</li>
+<li>其他优化</li>
+</ol>
+<p>本篇为第三部分，优化的几个方面主要为：</p>
+<ul>
+<li><p>主题</p>
+<p>是否觉得博客页面不好看，想要换一个别人设计好的主题？试试Next主题</p>
+<p><a href="http://www.cnblogs.com/syd192/p/6074323.html" target="_blank" rel="noopener">Hexo的Next主题配置</a></p>
+</li>
+<li><p>评论</p>
+<p>觉得只有自己的博文太单调，别人无法评论？综合了多个评论系统，最后我选择了valine</p>
+<p><a href="https://blog.csdn.net/blue_zy/article/details/79071414" target="_blank" rel="noopener">为你的Hexo加上评论系统-Valine</a></p>
+</li>
+<li><p>双托管</p>
+<p>自己的博客的访问速度太慢了？这主要是由于Github在国内的访问速度不稳定，试试Coding+Github双托管吧！</p>
+<p><a href="https://www.jianshu.com/p/5ae550a436b6" target="_blank" rel="noopener">Coding+Github双服务器托管个人博客</a></p>
+</li>
+<li><p>编写博客</p>
+<p>感觉没有一个称手的Markdown编辑器，每次编写完还要手动提交，好麻烦？试试Hexo admin吧，可视化界面，一键发布博客！</p>
+<p><a href="https://jaredforsyth.com/hexo-admin/" target="_blank" rel="noopener">Hexo Admin Plugin</a></p>
+<p>其他的一些功能就要靠大家自己慢慢去发掘了，希望每个人都可以拥有自己的一片天地~</p>
+</li>
+</ul>
+
       
     </div>
     
@@ -429,348 +456,40 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://code4today.xyz/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="duome">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Code4Today">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/" itemprop="url">博客搭建（二）NameSilo+dnspod建立自己的域名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T21:47:00+08:00">
-                2018-10-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/博客搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">博客搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
-
+            <a href="/tags/blog/" rel="tag"># blog</a>
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
+            <a href="/tags/gihub/" rel="tag"># gihub</a>
           
-
-          
-          
-             <span id="/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/" class="leancloud_visitors" data-flag-title="博客搭建（二）NameSilo+dnspod建立自己的域名">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>上一篇我们讲到了我们在Github上建立好了自己的个人博客，但是由于博客是部署在Github上的，访问的时候必须输入<code>username.github.io</code>，这样作为个人博客是不是有点别扭呢？为了能有一个个性化的域名，就需要进行本篇的操作啦。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/" rel="next" title="博客搭建（二）NameSilo+dnspod建立自己的域名">
+                <i class="fa fa-chevron-left"></i> 博客搭建（二）NameSilo+dnspod建立自己的域名
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://code4today.xyz/2018/博客搭建（一）hexo + github 创建博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="duome">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Code4Today">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/博客搭建（一）hexo + github 创建博客/" itemprop="url">博客搭建（一）hexo + github 创建博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-07T10:15:06+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/博客搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">博客搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/博客搭建（一）hexo + github 创建博客/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/博客搭建（一）hexo + github 创建博客/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/博客搭建（一）hexo + github 创建博客/" class="leancloud_visitors" data-flag-title="博客搭建（一）hexo + github 创建博客">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>一直想自己搭建一个博客，最近在空闲的时候陆陆续续搞了几天终于基本成功了，操作系统为Windows 7 64位。由于安装的时候没有截图，所以安装过程主要是文字，图片可以在最后的参考链接中看到一部分，希望可以给大家一些帮助。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/博客搭建（一）hexo + github 创建博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -780,10 +499,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -791,6 +511,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -1018,6 +745,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
