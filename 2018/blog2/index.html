@@ -83,11 +83,11 @@
 <meta name="keywords" content="hexo,github,blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客搭建（二）NameSilo+dnspod建立自己的域名">
-<meta property="og:url" content="http://code4today.xyz/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/index.html">
+<meta property="og:url" content="http://code4today.xyz/2018/blog2/index.html">
 <meta property="og:site_name" content="Code4Today">
 <meta property="og:description" content="上一篇我们讲到了我们在Github上建立好了自己的个人博客，但是由于博客是部署在Github上的，访问的时候必须输入username.github.io，这样作为个人博客是不是有点别扭呢？为了能有一个个性化的域名，就需要进行本篇的操作啦。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-05T14:13:59.797Z">
+<meta property="og:updated_time" content="2018-10-05T14:36:05.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客搭建（二）NameSilo+dnspod建立自己的域名">
 <meta name="twitter:description" content="上一篇我们讲到了我们在Github上建立好了自己的个人博客，但是由于博客是部署在Github上的，访问的时候必须输入username.github.io，这样作为个人博客是不是有点别扭呢？为了能有一个个性化的域名，就需要进行本篇的操作啦。">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://code4today.xyz/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/"/>
+  <link rel="canonical" href="http://code4today.xyz/2018/blog2/"/>
 
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://code4today.xyz/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/">
+    <link itemprop="mainEntityOfPage" href="http://code4today.xyz/2018/blog2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="duome">
@@ -367,8 +367,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/" itemprop="commentCount"></span>
+                <a href="/2018/blog2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/blog2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -376,7 +376,7 @@
 
           
           
-             <span id="/2018/博客搭建（二）NameSilo-dnspod建立自己的域名/" class="leancloud_visitors" data-flag-title="博客搭建（二）NameSilo+dnspod建立自己的域名">
+             <span id="/2018/blog2/" class="leancloud_visitors" data-flag-title="博客搭建（二）NameSilo+dnspod建立自己的域名">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -411,15 +411,15 @@
 <a id="more"></a>
 <p>首先来回顾一下上次我们讲的搭建博客的步骤：</p>
 <ol>
-<li>在本地创建好博客文件并上传到github上，这样就可以在github上浏览自己的博客啦<ul>
+<li>在本地创建好博客文件并上传到github上，这样就可以在github上浏览自己的博客啦，详见<a href="/2018/blog1/" title="这里">这里</a><ul>
 <li>包括安装Node.js, git，hexo，注册github帐号等</li>
 </ul>
 </li>
-<li>为自己的博客设置一个域名，这样就可以从个性化的域名里直接访问博客<ul>
+<li>为自己的博客设置一个域名，这样就可以从个性化的域名里直接访问博客，详见<a href="/2018/blog2/" title="这里">这里</a><ul>
 <li>包括域名购买，dns设置，pages设置等</li>
 </ul>
 </li>
-<li>其他优化</li>
+<li>其他优化，详见<a href="/2018/blog3/" title="这里">这里</a></li>
 </ol>
 <p>域名购买目前其实有很多的网站可供选择，比如国内的阿里云，国外的GoDaddy, NameCheap，NameSilo等等。综合考虑了各方因素，最后我是在<a href="www.namesilo.com">NameSilo</a>上买的，还支持支付宝付款，非常方便。</p>
 <p>域名购买之后，要让别人能够成功访问到这个域名，就需要设置DNS，这里用的是<a href="www.dnspod.cn">DNSPod</a>的服务，添加域名后选择记录类型为CNAME，记录值为<code>code4today.github.io.</code>主机类型为@/www分别设置一条。这里以本域名为例解释下，主机类型为@指的是访问的是code4today.xyz，主机类型为www指的是访问的是<a href="http://www.code4today.xyz，为了让两个网址都能被访问，需要把两个类型都添加一次。细心的朋友会发现上面的记录值的最后会有一个小点点，即使你没打他也会自动添加上去，如果不加这个小点报错了的话就要手动加上去。添加后，不要着急，一般过个一两天，DNS才能刷新成功。" target="_blank" rel="noopener">www.code4today.xyz，为了让两个网址都能被访问，需要把两个类型都添加一次。细心的朋友会发现上面的记录值的最后会有一个小点点，即使你没打他也会自动添加上去，如果不加这个小点报错了的话就要手动加上去。添加后，不要着急，一般过个一两天，DNS才能刷新成功。</a></p>
@@ -460,7 +460,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/博客搭建（一）hexo + github 创建博客/" rel="next" title="博客搭建（一）hexo + github 创建博客">
+              <a href="/2018/blog1/" rel="next" title="博客搭建（一）hexo + github 创建博客">
                 <i class="fa fa-chevron-left"></i> 博客搭建（一）hexo + github 创建博客
               </a>
             
@@ -470,7 +470,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/博客搭建（三）其他优化/" rel="prev" title="博客搭建（三）其他优化">
+              <a href="/2018/blog3/" rel="prev" title="博客搭建（三）其他优化">
                 博客搭建（三）其他优化 <i class="fa fa-chevron-right"></i>
               </a>
             
