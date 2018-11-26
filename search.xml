@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[LeetCode 66. Plus One]]></title>
+    <title><![CDATA[LeetCode 66. Plus One (Easy)]]></title>
     <url>%2F2018%2FLeetCode-66-Plus-One%2F</url>
-    <content type="text"><![CDATA[Given a non-empty array of digits representing a non-negative integer, plus one to the integer. The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit. You may assume the integer does not contain any leading zero, except the number 0 itself. Example 1: Input: [1,2,3]Output: [1,2,4]Explanation: The array represents the integer 123.Example 2: Input: [4,3,2,1]Output: [4,3,2,2]Explanation: The array represents the integer 4321.]]></content>
+    <content type="text"><![CDATA[Given a non-empty array of digits representing a non-negative integer, plus one to the integer. The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit. You may assume the integer does not contain any leading zero, except the number 0 itself. Example 1: Input: [1,2,3]Output: [1,2,4]Explanation: The array represents the integer 123.Example 2: Input: [4,3,2,1]Output: [4,3,2,2]Explanation: The array represents the integer 4321. 难度：1 有趣度：1 这题其实很简单，意思就是，输入的list代表了一个非负整数，为这个数加上1，还用这种list表示。我的解法是简单的从最后一位开始+1，有进位进位即可。 1234567891011121314151617181920212223242526272829303132333435363738class Solution(object): def plusOne(self, digits): """ :type digits: List[int] :rtype: List[int] """ # self.testSet(self.apAddFromLast) return self.apAddFromLast(digits) # Time: O(n) Space: O(n) def apAddFromLast(self, digits): i = len(digits) - 1 while i &gt;= 0: if digits[i] &lt; 9: digits[i] += 1 return digits else: digits[i] = 0 i -= 1 digits.insert(0, 1) return digits def testSet(self, ap): test_data = [ ([1, 2, 3], [1, 2, 4]), ([4, 3, 2, 1], [4, 3, 2, 2]), ([9], [1, 0]), ([9, 9, 9, 9], [1, 0, 0, 0, 0]), ([0], [1]), ([], [1]), ] test_pass = True for test_itr in test_data: if ap(test_itr[0]) != test_itr[1]: test_pass = False print 'In:', test_itr[0], 'Out:', ap(test_itr[0]), 'Ans:', test_itr[1] if test_pass: print 'All test has been passed.']]></content>
   </entry>
   <entry>
     <title><![CDATA[博客搭建（三）其他优化]]></title>
