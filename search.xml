@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode 66. Plus One]]></title>
+    <url>%2F2018%2FLeetCode-66-Plus-One%2F</url>
+    <content type="text"><![CDATA[Given a non-empty array of digits representing a non-negative integer, plus one to the integer. The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit. You may assume the integer does not contain any leading zero, except the number 0 itself. Example 1: Input: [1,2,3]Output: [1,2,4]Explanation: The array represents the integer 123.Example 2: Input: [4,3,2,1]Output: [4,3,2,2]Explanation: The array represents the integer 4321.]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[博客搭建（三）其他优化]]></title>
     <url>%2F2018%2Fblog3%2F</url>
     <content type="text"><![CDATA[经过了前两个步骤，其实我们已经拥有了自己的博客，用Markdown就可以开始编写自己的博文了。下面是尝试的一些其他优化，由于内容较多，不再一一叙述，大家可以通过链接自行尝试~ 首先我们再次回顾之前讲的搭建博客的步骤： 在本地创建好博客文件并上传到github上，这样就可以在github上浏览自己的博客啦，详见这里 包括安装Node.js, git，hexo，注册github帐号等 为自己的博客设置一个域名，这样就可以从个性化的域名里直接访问博客，详见这里 包括域名购买，dns设置，pages设置等 其他优化，详见这里 本篇为第三部分，优化的几个方面主要为： 主题 是否觉得博客页面不好看，想要换一个别人设计好的主题？试试Next主题 Hexo的Next主题配置 评论 觉得只有自己的博文太单调，别人无法评论？综合了多个评论系统，最后我选择了valine 为你的Hexo加上评论系统-Valine 双托管 自己的博客的访问速度太慢了？这主要是由于Github在国内的访问速度不稳定，试试Coding+Github双托管吧！ Coding+Github双服务器托管个人博客 编写博客 感觉没有一个称手的Markdown编辑器，每次编写完还要手动提交，好麻烦？试试Hexo admin吧，可视化界面，一键发布博客！ Hexo Admin Plugin 其他的一些功能就要靠大家自己慢慢去发掘了，希望每个人都可以拥有自己的一片天地~]]></content>
