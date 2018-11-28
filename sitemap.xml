@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://code4today.xyz/2018/LeetCode-101-Symmetric-Tree-Easy/</loc>
+    
+    <lastmod>2018-11-28T15:10:45.658Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://code4today.xyz/2018/LeetCode-100-Same-Tree/</loc>
     
-    <lastmod>2018-11-28T14:43:29.671Z</lastmod>
+    <lastmod>2018-11-28T14:48:41.030Z</lastmod>
     
   </url>
   
