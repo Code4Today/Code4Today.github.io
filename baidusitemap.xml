@@ -4,29 +4,18 @@
 
     
   <url>
-    <loc>http://code4today.xyz/2018/LeetCode-101-Symmetric-Tree-Easy/</loc>
-    <lastmod>2018-11-28T15:10:45.658Z</lastmod>
+    <loc>http://code4today.xyz/2018/LeetCode-53-Maximum-Subarray-Easy/</loc>
+    <lastmod>2018-11-28T15:28:47.064Z</lastmod>
     <data>
         <display>
-        <title>LeetCode 101. Symmetric Tree (Easy)</title>
-        <pubTime>2018-11-28T15:09:21.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://code4today.xyz/2018/LeetCode-100-Same-Tree/</loc>
-    <lastmod>2018-11-28T14:48:41.030Z</lastmod>
-    <data>
-        <display>
-        <title>*LeetCode 100. Same Tree (Easy)</title>
-        <pubTime>2018-11-28T14:39:00.000Z</pubTime>
+        <title>**LeetCode 53. Maximum Subarray (Easy) DP BS</title>
+        <pubTime>2018-11-28T15:17:00.000Z</pubTime>
         
         <tag>LeetCode</tag>
+         
+        <tag>DP</tag>
+         
+        <tag>BS</tag>
          
          
            
@@ -40,10 +29,10 @@
     
   <url>
     <loc>http://code4today.xyz/2018/LeetCode-69-Sqrt-x-Easy/</loc>
-    <lastmod>2018-11-28T07:34:37.060Z</lastmod>
+    <lastmod>2018-11-28T15:28:26.203Z</lastmod>
     <data>
         <display>
-        <title>*LeetCode 69. Sqrt(x) (Easy)</title>
+        <title>*LeetCode 69. Sqrt(x) (Easy) BS</title>
         <pubTime>2018-11-28T07:16:00.000Z</pubTime>
         
         <tag>LeetCode</tag>
@@ -60,13 +49,83 @@
     
   <url>
     <loc>http://code4today.xyz/2018/LeetCode-70-Climbing-Stairs/</loc>
-    <lastmod>2018-11-28T07:34:30.272Z</lastmod>
+    <lastmod>2018-11-28T15:28:00.949Z</lastmod>
     <data>
         <display>
-        <title>***LeetCode 70. Climbing Stairs</title>
+        <title>***LeetCode 70. Climbing Stairs (Easy) DP</title>
         <pubTime>2018-11-28T07:20:00.000Z</pubTime>
         
         <tag>LeetCode</tag>
+         
+        <tag>DP</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://code4today.xyz/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://code4today.xyz/2018/LeetCode-58-Length-of-Last-Word-Easy/</loc>
+    <lastmod>2018-11-28T15:27:45.809Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 58. Length of Last Word (Easy)</title>
+        <pubTime>2018-11-28T15:14:00.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://code4today.xyz/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://code4today.xyz/2018/LeetCode-100-Same-Tree/</loc>
+    <lastmod>2018-11-28T15:27:38.765Z</lastmod>
+    <data>
+        <display>
+        <title>*LeetCode 100. Same Tree (Easy)</title>
+        <pubTime>2018-11-28T14:39:00.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>BFS</tag>
+         
+        <tag>DFS</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://code4today.xyz/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://code4today.xyz/2018/LeetCode-101-Symmetric-Tree-Easy/</loc>
+    <lastmod>2018-11-28T15:27:26.419Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 101. Symmetric Tree (Easy) BFS DFS</title>
+        <pubTime>2018-11-28T15:09:00.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>BFS</tag>
+         
+        <tag>DFS</tag>
          
          
            

@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[LeetCode 101. Symmetric Tree (Easy)]]></title>
+    <title><![CDATA[**LeetCode 53. Maximum Subarray (Easy) DP BS]]></title>
+    <url>%2F2018%2FLeetCode-53-Maximum-Subarray-Easy%2F</url>
+    <content type="text"><![CDATA[Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. Example: Input: [-2,1,-3,4,-1,2,1,-5,4], Output: 6 Explanation: [4,-1,2,1] has the largest sum = 6. Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle. 求数组nums的和最大的子数组，返回这个最大的和。 这题如果用暴力迭代的话，需要时间复杂度O(n^2)。所以这里有一种很巧妙的办法，动态规划。首先考虑只有一个数字的数组，那么就是他本身，如果有两个数字，包含第一个数字的最大子数组就考虑新加入的数字是否大于0，而包含第二个数字的最大子数组就考虑原先的数字是否大于0。如此迭代，我们可以得到一个到此数字为止包含此数字的最大子数组和的数组。最后，找出这个数组的最大值即可。时间复杂度为O(n)。 题目还要求用二分法的方法做。将数组分为左右两个子数组。这时有三种情况： 最大的子数组在左边 最大的子数组在右边 最大的子数组横跨左右 前两种都好解决，直接继续迭代即可。最后一种情况需要我们分别计算出左边数组的包含右边界的子数组的最大值和右边数组的包含左边界的子数组最大值，然后将二者相加。比较出三种情况的最大值即为所需结果。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788class Solution(object): def maxSubArray(self, nums): """ :type nums: List[int] :rtype: int """ # self.testSet(self.apDivideAndConquer) return self.apDivideAndConquer(nums) def apDivideAndConquer(self, nums): if nums == None or len(nums) == 0: return 0 else: return self.subArrayMax(nums, 0, len(nums) - 1) def subArrayMax(self, nums, begin, end): if begin == end: return nums[begin] else: mid = (begin + end) / 2 left_max = self.subArrayMax(nums, begin, mid) right_max = self.subArrayMax(nums, mid + 1, end) left_right_sum_max = left_right_sum = nums[mid] for i_itr in range(mid - 1, begin - 1, -1): left_right_sum += nums[i_itr] left_right_sum_max = max(left_right_sum_max, left_right_sum) right_left_sum_max = right_left_sum = nums[mid+1] for i_itr in range(mid + 2, end + 1, 1): right_left_sum += nums[i_itr] right_left_sum_max = max(right_left_sum_max, right_left_sum) return max(left_max, right_max, left_right_sum_max + right_left_sum_max) def apMaxForEachElementImproved(self, nums): if nums == None or len(nums) == 0: return 0 elif len(nums) == 1: return nums[0] else: for i_itr in range(1, len(nums)): if nums[i_itr - 1] &gt; 0: nums[i_itr] += nums[i_itr - 1] return max(nums) def apMaxForEachElement(self, nums): if nums == None or len(nums) == 0: return 0 elif len(nums) == 1: return nums[0] else: max_list = [nums[0]] for i_itr in range(1, len(nums)): if max_list[i_itr - 1] &gt; 0: max_list.append(max_list[i_itr - 1] + nums[i_itr]) else: max_list.append(nums[i_itr]) return max(max_list) def apBruteForce(self, nums): if nums == None or len(nums) == 0: return 0 elif len(nums) == 1: return nums[0] else: sum_max = -float('inf') for list_begin in range(len(nums)): for list_end in range(list_begin+1, len(nums)+1): sum_temp = sum(nums[list_begin:list_end]) sum_max = max(sum_temp, sum_max) return sum_max def testSet(self, ap): test_data = [ ([-2, 1, -3, 4, -1, 2, 1, -5, 4], 6), ([6, 3, -1, -1, -1, 7], 13), ([], 0), ([-2], -2), ([6, -2], 6), ([9, -10, 4, 5, 6, -1], 15), ([-1, 4, 5, -1, 6, 2], 16), ] test_passed = True for test_itr in test_data: if ap(test_itr[0]) != test_itr[1]: test_passed = False print 'In:', test_itr[0], 'Out:', ap(test_itr[0]), 'Answer:', test_itr[1] if test_passed: print 'All test has been passed.']]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>DP</tag>
+        <tag>BS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode 58. Length of Last Word (Easy)]]></title>
+    <url>%2F2018%2FLeetCode-58-Length-of-Last-Word-Easy%2F</url>
+    <content type="text"><![CDATA[Given a string s consists of upper/lower-case alphabets and empty space characters ‘ ‘, return the length of last word in the string. If the last word does not exist, return 0. Note: A word is defined as a character sequence consists of non-space characters only. Example: Input: “Hello World” Output: 5 求字符串中的最后一个单词的长度。 这题主要是要注意特殊情况，比如没有最后一个单词的情况，以及最后是空格的情况。从这题开始，尽量都先写测试集。 123456789101112131415161718192021222324252627282930313233343536class Solution(object): def lengthOfLastWord(self, s): """ :type s: str :rtype: int """ # self.testSet(self.apSplit) return self.apSplit(s) def apSplit(self, s): if s == None or len(s) == 0: return 0 else: l = s.split(' ') for word_itr in l[::-1]: if word_itr != '': return len(word_itr) return 0 def testSet(self, ap): test_data = [ ('a', 1), ('hello world', 5), ('', 0), ('a ', 1), ('a ', 1), (' ', 0) ] test_passed = True for test_itr in test_data: if ap(test_itr[0]) != test_itr[1]: test_passed = False print 'In:', test_itr[0], 'Out:', ap(test_itr[0]), 'Ans:', test_itr[1] if test_passed: print 'All test has been passed.']]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode 101. Symmetric Tree (Easy) BFS DFS]]></title>
     <url>%2F2018%2FLeetCode-101-Symmetric-Tree-Easy%2F</url>
     <content type="text"><![CDATA[Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center). For example, this binary tree [1,2,2,3,4,4,3] is symmetric: But the following [1,2,2,null,3,null,3] is not: Note: Bonus points if you could solve it both recursively and iteratively. 求一颗二叉树是否完全对称。 解法和100题差不多，就不再说了。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657# Definition for a binary tree node.# class TreeNode(object):# def __init__(self, x):# self.val = x# self.left = None# self.right = Noneclass Solution(object): def isSymmetric(self, root): """ :type root: TreeNode :rtype: bool """ return self.apDFS(root) def apRecursive(self, root): if root: return self.recurseTwoTrees(root.left, root.right) return True def recurseTwoTrees(self, node_left, node_right): if node_left and node_right: return node_left.val == node_right.val and self.recurseTwoTrees(node_left.left, node_right.right) and self.recurseTwoTrees(node_left.right, node_right.left) else: return node_left == node_right def apBFS(self, root): if root: node_stack = [(root.left, root.right)] while node_stack: node1, node2 = node_stack.pop(0) if node1 and node2: if node1.val == node2.val: node_stack.append((node1.left, node2.right)) node_stack.append((node1.right, node2.left)) else: return False else: if node1 != node2: return False return True def apDFS(self, root): if root: node_stack = [(root.left, root.right)] while node_stack: node1, node2 = node_stack.pop() if node1 and node2: if node1.val == node2.val: node_stack.append((node1.left, node2.right)) node_stack.append((node1.right, node2.left)) else: return False else: if node1 != node2: return False return True]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>BFS</tag>
+        <tag>DFS</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[*LeetCode 100. Same Tree (Easy)]]></title>
@@ -14,10 +46,12 @@
       </categories>
       <tags>
         <tag>LeetCode</tag>
+        <tag>BFS</tag>
+        <tag>DFS</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[***LeetCode 70. Climbing Stairs]]></title>
+    <title><![CDATA[***LeetCode 70. Climbing Stairs (Easy) DP]]></title>
     <url>%2F2018%2FLeetCode-70-Climbing-Stairs%2F</url>
     <content type="text"><![CDATA[You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positive integer. Example 1: Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1 step + 1 step 2 steps Example 2: Input: 3 Output: 3 Explanation: There are three ways to climb to the top. 1 step + 1 step + 1 step 1 step + 2 steps 2 steps + 1 step 一共n层阶梯，一次可以上一层或两层阶梯，问上到阶梯顶部的方法有多少种？ 这是一个非常经典的递归问题了。 第一反应自然是用递归做，递归的时候记得存储每次的结果，不然递归会很慢。递归解法时间复杂度O(n)（不存储结果的话为O(2^n)），空间复杂度O(n) 第二种解法是，其实这个问题的本质是斐波那契数列，所以直接计算该数列，记住最后两个结果即可，不用记住前面的结果，所以时间复杂度O(n)，空间复杂度O(1) 第三种解法很有趣，我们可以发现矩阵关系[[Fn+1, Fn], [Fn, Fn-1]] = ([[1, 1], [1, 0]])^(n+1)，所以我们只需要对该矩阵求n次幂，左上角的结果即为Fn。而对矩阵求n次幂可以二分为求n/2次幂的平方，如此迭代后时间复杂度为O(log(n))，空间复杂度为O(1) 第四种解法就是直接带斐波那契数列的公式，由于存在幂次，所以时间复杂度为O(log(n))，空间复杂度为O(1) 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869from math import sqrtimport copyclass Solution(object): climb_list = [0, 1, 2] + [0] * 65535 def climbStairs(self, n): """ :type n: int :rtype: int """ # self.testSet(self.apFormula) return self.apFormula(n) def apFormula(self, n): return int(1/sqrt(5)*(((1 + sqrt(5))/2)**(n+1) - ((1 - sqrt(5))/2)**(n+1))) def apMatrix(self, n): q = [[1, 1], [1, 0]] return self.matrixPower(q, n)[0][0] def matrixPower(self, q, n): ret = [[1, 0], [0, 1]] while n &gt; 0: if n &amp; 1 == 1: ret = self.matrixMul(ret, q) n &gt;&gt;= 1 q = self.matrixMul(q, q) return ret def matrixMul(self, m1, m2): r = [] for row in range(2): r.append([]) for col in range(2): r[row].append(m1[row][0] * m2[0][col] + m1[row][1] * m2[1][col]) return r def apDynamicProgram(self, n): if n == 1: return 1 elif n == 2: return 2 else: prev = 1 now = 2 while n &gt; 2: prev, now = now, prev + now n -= 1 return now def apRecursion(self, n): if self.climb_list[n] == 0: self.climb_list[n] = self.apRecursion(n - 1) + self.apRecursion(n - 2) return self.climb_list[n] def testSet(self, ap): test_data = [ (1, 1), (2, 2), (3, 3), (8, 34), (7, 21), ] test_pass = True for test_itr in test_data: if ap(test_itr[0]) != test_itr[1]: test_pass = False print 'In:', test_itr[0], "Out:", ap(test_itr[0]), 'Ans:', test_itr[1] if test_pass: print 'All test has been passed.']]></content>
       <categories>
@@ -25,10 +59,11 @@
       </categories>
       <tags>
         <tag>LeetCode</tag>
+        <tag>DP</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[*LeetCode 69. Sqrt(x) (Easy)]]></title>
+    <title><![CDATA[*LeetCode 69. Sqrt(x) (Easy) BS]]></title>
     <url>%2F2018%2FLeetCode-69-Sqrt-x-Easy%2F</url>
     <content type="text"><![CDATA[Implement int sqrt(int x). Compute and return the square root of x, where x is guaranteed to be a non-negative integer. Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned. Example 1: Input: 4 Output: 2 Example 2: Input: 8 Output: 2 Explanation: The square root of 8 is 2.82842…, and since the decimal part is truncated, 2 is returned. 给出一个数x，求x的平方根取整后的结果。 这题有两种解法，一种是从x开始二分查找，最终确定x，另一种是按位确定x的范围，其实也是一种二分查找，不过代码比较简洁。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950class Solution(object): def mySqrt(self, x): """ :type x: int :rtype: int """ # self.testSet(self.apBitSearch) return self.apBitSearch(x) def apBitSearch(self, x): ans = 0 bit = 1l &lt;&lt; 16 while bit &gt; 0: ans |= bit if ans * ans &gt; x: ans ^= bit bit &gt;&gt;= 1 return ans def apBinarySearch(self, x): low, high = 1, x while high &gt; low: mid = (low + high) / 2 if mid ** 2 &gt; x: high = mid - 1 elif mid ** 2 &lt;= x: low = mid + 1 if low ** 2 &gt; x: return low - 1 else: return low def testSet(self, ap): test_data = [ (1, 1), (2, 1), (3, 1), (4, 2), (8, 2), (17, 4), (404, 20), (900, 30), ] test_pass = True for test_itr in test_data: if ap(test_itr[0]) != test_itr[1]: test_pass = False print 'In:', test_itr[0], 'Out:', ap(test_itr[0]), 'Ans:', test_itr[1] if test_pass: print 'All test has been passed.']]></content>
       <categories>
