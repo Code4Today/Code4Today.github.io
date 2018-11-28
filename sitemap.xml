@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://code4today.xyz/2018/LeetCode-67-Add-Binary-Easy/</loc>
+    
+    <lastmod>2018-11-28T07:13:11.749Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://code4today.xyz/2018/LeetCode-83-Remove-Duplicates-from-Sorted-List/</loc>
     
     <lastmod>2018-11-28T07:09:26.008Z</lastmod>
