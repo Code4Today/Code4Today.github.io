@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[***LeetCode 70. Climbing Stairs]]></title>
+    <url>%2F2018%2FLeetCode-70-Climbing-Stairs%2F</url>
+    <content type="text"><![CDATA[You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positive integer. Example 1: Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1 step + 1 step 2 steps Example 2: Input: 3 Output: 3 Explanation: There are three ways to climb to the top. 1 step + 1 step + 1 step 1 step + 2 steps 2 steps + 1 step 一共n层阶梯，一次可以上一层或两层阶梯，问上到阶梯顶部的方法有多少种？ 这是一个非常经典的递归问题了。 第一反应自然是用递归做，递归的时候记得存储每次的结果，不然递归会很慢。递归解法时间复杂度O(n)（不存储结果的话为O(2^n)），空间复杂度O(n) 第二种解法是，其实这个问题的本质是斐波那契数列，所以直接计算该数列，记住最后两个结果即可，不用记住前面的结果，所以时间复杂度O(n)，空间复杂度O(1) 第三种解法很有趣，$$x_1$$]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[*LeetCode 69. Sqrt(x) (Easy)]]></title>
+    <url>%2F2018%2FLeetCode-69-Sqrt-x-Easy%2F</url>
+    <content type="text"><![CDATA[Implement int sqrt(int x). Compute and return the square root of x, where x is guaranteed to be a non-negative integer. Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned. Example 1: Input: 4 Output: 2 Example 2: Input: 8 Output: 2 Explanation: The square root of 8 is 2.82842…, and since the decimal part is truncated, 2 is returned. 给出一个数x，求x的平方根取整后的结果。 这题有两种解法，一种是从x开始二分查找，最终确定x，另一种是按位确定x的范围，其实也是一种二分查找，不过代码比较简洁。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950class Solution(object): def mySqrt(self, x): """ :type x: int :rtype: int """ # self.testSet(self.apBitSearch) return self.apBitSearch(x) def apBitSearch(self, x): ans = 0 bit = 1l &lt;&lt; 16 while bit &gt; 0: ans |= bit if ans * ans &gt; x: ans ^= bit bit &gt;&gt;= 1 return ans def apBinarySearch(self, x): low, high = 1, x while high &gt; low: mid = (low + high) / 2 if mid ** 2 &gt; x: high = mid - 1 elif mid ** 2 &lt;= x: low = mid + 1 if low ** 2 &gt; x: return low - 1 else: return low def testSet(self, ap): test_data = [ (1, 1), (2, 1), (3, 1), (4, 2), (8, 2), (17, 4), (404, 20), (900, 30), ] test_pass = True for test_itr in test_data: if ap(test_itr[0]) != test_itr[1]: test_pass = False print 'In:', test_itr[0], 'Out:', ap(test_itr[0]), 'Ans:', test_itr[1] if test_pass: print 'All test has been passed.']]></content>
+  </entry>
+  <entry>
     <title><![CDATA[LeetCode 67. Add Binary (Easy)]]></title>
     <url>%2F2018%2FLeetCode-67-Add-Binary-Easy%2F</url>
     <content type="text"><![CDATA[Given two binary strings, return their sum (also a binary string). The input strings are both non-empty and contains only characters 1 or 0. Example 1: Input: a = “11”, b = “1” Output: “100” Example 2: Input: a = “1010”, b = “1011” Output: “10101” 给定a,b两个字符串，分别代表两个数的二进制值，计算他们和的二进制值。 这里就是简单的相加，自己写函数的话就是单位相加进位，没太大可写之处，所以直接用了bin函数。 12345678class Solution(object): def addBinary(self, a, b): """ :type a: str :type b: str :rtype: str """ return bin(int(a, 2) + int(b, 2))[2:]]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[LeetCode 83. Remove Duplicates from Sorted List (Easy)]]></title>
     <url>%2F2018%2FLeetCode-83-Remove-Duplicates-from-Sorted-List%2F</url>
     <content type="text"><![CDATA[Given a sorted linked list, delete all duplicates such that each element appear only once. Example 1: Input: 1-&gt;1-&gt;2 Output: 1-&gt;2 Example 2: Input: 1-&gt;1-&gt;2-&gt;3-&gt;3 Output: 1-&gt;2-&gt;3 这题就是将链表中的重复数据删除掉，遍历一遍链表，查看该节点的值是否与下一个节点相同，相同的话替换掉下一个节点，循环到最后即可。注意空链表的情况。 如果需要考虑链表有环的情况的话，就先用一快一慢两个指针先遍历一遍链表，一个每次移动一节，一个每次移动两节，看两个指针最终是重合还是有一个到达了终点。这里代码里没有写这种情况，有兴趣的可以自己写一下。 1234567891011121314151617181920# Definition for singly-linked list.# class ListNode(object):# def __init__(self, x):# self.val = x# self.next = Noneclass Solution(object): def deleteDuplicates(self, head): """ :type head: ListNode :rtype: ListNode """ if head: itr = head while itr and itr.next: if itr.val == itr.next.val: itr.next = itr.next.next else: itr = itr.next return head]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[LeetCode 88. Merge Sorted Array (Easy)]]></title>
     <url>%2F2018%2FLeetCode-88-Merge-Sorted-Array-Easy%2F</url>
     <content type="text"><![CDATA[Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array. Note: The number of elements initialized in nums1 and nums2 are m and n respectively.You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.Example: Input:nums1 = [1,2,3,0,0,0], m = 3nums2 = [2,5,6], n = 3 Output: [1,2,2,3,5,6] 这题的意思很简单，就是有nums1, nums2两个排好序的数组，假设nums1具有足够的空间，将nums1改成两个数组合并后的排序数组。注意要在nums1上直接改动而不是新建一个数组。 由于nums1后面都是闲置的0，从后面倒过来排序即可。代码： 1234567891011121314151617181920212223class Solution(object): def merge(self, nums1, m, nums2, n): """ :type nums1: List[int] :type m: int :type nums2: List[int] :type n: int :rtype: void Do not return anything, modify nums1 in-place instead. """ return self.sortFromMax(nums1, m, nums2, n) def sortFromMax(self, nums1, m, nums2, n): idx_itr = m + n while m &gt; 0 and n &gt; 0: if nums1[m - 1] &gt; nums2[n - 1]: nums1[idx_itr - 1] = nums1[m - 1] m, idx_itr = m - 1, idx_itr - 1 else: nums1[idx_itr - 1] = nums2[n - 1] n, idx_itr = n - 1, idx_itr - 1 while n &gt; 0: nums1[idx_itr - 1] = nums2[n - 1] n, idx_itr = n - 1, idx_itr - 1]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[LeetCode 66. Plus One (Easy)]]></title>

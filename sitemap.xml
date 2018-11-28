@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://code4today.xyz/2018/LeetCode-70-Climbing-Stairs/</loc>
+    
+    <lastmod>2018-11-28T07:27:11.120Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://code4today.xyz/2018/LeetCode-69-Sqrt-x-Easy/</loc>
+    
+    <lastmod>2018-11-28T07:19:33.683Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://code4today.xyz/2018/LeetCode-67-Add-Binary-Easy/</loc>
     
-    <lastmod>2018-11-28T07:13:11.749Z</lastmod>
+    <lastmod>2018-11-28T07:14:56.878Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://code4today.xyz/2018/LeetCode-83-Remove-Duplicates-from-Sorted-List/</loc>
     
-    <lastmod>2018-11-28T07:09:26.008Z</lastmod>
+    <lastmod>2018-11-28T07:14:48.473Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://code4today.xyz/2018/LeetCode-88-Merge-Sorted-Array-Easy/</loc>
     
-    <lastmod>2018-11-28T07:01:30.844Z</lastmod>
+    <lastmod>2018-11-28T07:14:39.146Z</lastmod>
     
   </url>
   

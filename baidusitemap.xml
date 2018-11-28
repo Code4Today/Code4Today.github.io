@@ -4,15 +4,50 @@
 
     
   <url>
-    <loc>http://code4today.xyz/2018/LeetCode-67-Add-Binary-Easy/</loc>
-    <lastmod>2018-11-28T07:13:11.749Z</lastmod>
+    <loc>http://code4today.xyz/2018/LeetCode-70-Climbing-Stairs/</loc>
+    <lastmod>2018-11-28T07:27:11.120Z</lastmod>
     <data>
         <display>
-        <title>LeetCode 67. Add Binary (Easy)</title>
-        <pubTime>2018-11-28T07:10:42.000Z</pubTime>
+        <title>***LeetCode 70. Climbing Stairs</title>
+        <pubTime>2018-11-28T07:20:16.000Z</pubTime>
         
          
            
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://code4today.xyz/2018/LeetCode-69-Sqrt-x-Easy/</loc>
+    <lastmod>2018-11-28T07:19:33.683Z</lastmod>
+    <data>
+        <display>
+        <title>*LeetCode 69. Sqrt(x) (Easy)</title>
+        <pubTime>2018-11-28T07:16:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://code4today.xyz/2018/LeetCode-67-Add-Binary-Easy/</loc>
+    <lastmod>2018-11-28T07:14:56.878Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 67. Add Binary (Easy)</title>
+        <pubTime>2018-11-28T07:10:00.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://code4today.xyz/categories/LeetCode/"/>
+          
         </display>
     </data>
     </url>
@@ -20,14 +55,19 @@
     
   <url>
     <loc>http://code4today.xyz/2018/LeetCode-83-Remove-Duplicates-from-Sorted-List/</loc>
-    <lastmod>2018-11-28T07:09:26.008Z</lastmod>
+    <lastmod>2018-11-28T07:14:48.473Z</lastmod>
     <data>
         <display>
         <title>LeetCode 83. Remove Duplicates from Sorted List (Easy)</title>
-        <pubTime>2018-11-28T07:03:44.000Z</pubTime>
+        <pubTime>2018-11-28T07:03:00.000Z</pubTime>
         
+        <tag>LeetCode</tag>
+         
          
            
+             
+              <breadCrumb title="LeetCode" url="http://code4today.xyz/categories/LeetCode/"/>
+          
         </display>
     </data>
     </url>
@@ -35,14 +75,19 @@
     
   <url>
     <loc>http://code4today.xyz/2018/LeetCode-88-Merge-Sorted-Array-Easy/</loc>
-    <lastmod>2018-11-28T07:01:30.844Z</lastmod>
+    <lastmod>2018-11-28T07:14:39.146Z</lastmod>
     <data>
         <display>
         <title>LeetCode 88. Merge Sorted Array (Easy)</title>
-        <pubTime>2018-11-28T06:55:50.000Z</pubTime>
+        <pubTime>2018-11-28T06:55:00.000Z</pubTime>
         
+        <tag>LeetCode</tag>
+         
          
            
+             
+              <breadCrumb title="LeetCode" url="http://code4today.xyz/categories/LeetCode/"/>
+          
         </display>
     </data>
     </url>
