@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[LeetCode 107. Binary Tree Level Order Traversal II (Easy) BFS DFS]]></title>
+    <title><![CDATA[*LeetCode 107. Binary Tree Level Order Traversal II (Easy) BFS DFS]]></title>
     <url>%2F2018%2FLeetCode-107-Binary-Tree-Level-Order-Traversal-II-Easy-BFS-DFS%2F</url>
-    <content type="text"><![CDATA[Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root). For example: Given binary tree [3,9,20,null,null,15,7], return its bottom-up level order traversal as:[ [15,7], [9,20], [3]] 给定一颗二叉树，返回一个从底层到顶层的List。]]></content>
+    <content type="text"><![CDATA[Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root). For example: Given binary tree [3,9,20,null,null,15,7], return its bottom-up level order traversal as:[ [15,7], [9,20], [3]] 给定一颗二叉树，返回一个从底层到顶层的List。 和之前BFS、DFS的问题差不多，注意顺序即可。DFS要注意list先加右边的node，再加左边的node，这样顺序才不会反过来。 123456789101112131415161718192021222324252627282930313233343536373839404142# Definition for a binary tree node.# class TreeNode(object):# def __init__(self, x):# self.val = x# self.left = None# self.right = Noneclass Solution(object): def levelOrderBottom(self, root): """ :type root: TreeNode :rtype: List[List[int]] """ return self.apDFS(root) def apDFS(self, root): stack = [(root, 0)] up_bottom_list = [] while stack != []: node, depth = stack.pop() if node: if depth &lt; len(up_bottom_list): up_bottom_list[depth].append(node.val) else: up_bottom_list.append([node.val]) stack.append((node.right, depth + 1)) stack.append((node.left, depth + 1)) return up_bottom_list[::-1] def apBFS(self, root): stack = [(root, 0)] up_bottom_list = [] while stack != []: node, depth = stack.pop(0) if node: if depth &lt; len(up_bottom_list): up_bottom_list[depth].append(node.val) else: up_bottom_list.append([node.val]) stack.append((node.left, depth + 1)) stack.append((node.right, depth + 1)) return up_bottom_list[::-1]]]></content>
       <categories>
         <category>LeetCode</category>
       </categories>
