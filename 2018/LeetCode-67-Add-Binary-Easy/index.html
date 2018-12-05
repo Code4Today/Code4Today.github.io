@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Code4Today">
 <meta property="og:description" content="Given two binary strings, return their sum (also a binary string). The input strings are both non-empty and contains only characters 1 or 0. Example 1: Input: a = “11”, b = “1”   Output: “100”   Exam">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-28T07:14:56.878Z">
+<meta property="og:updated_time" content="2018-12-05T02:30:54.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 67. Add Binary (Easy)">
 <meta name="twitter:description" content="Given two binary strings, return their sum (also a binary string). The input strings are both non-empty and contains only characters 1 or 0. Example 1: Input: a = “11”, b = “1”   Output: “100”   Exam">
@@ -410,6 +410,7 @@
 <blockquote>
 <p>Output: “10101”</p>
 </blockquote>
+<a id="more"></a>
 <p>给定a,b两个字符串，分别代表两个数的二进制值，计算他们和的二进制值。</p>
 <p>这里就是简单的相加，自己写函数的话就是单位相加进位，没太大可写之处，所以直接用了bin函数。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addBinary</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type a: str</span></span><br><span class="line"><span class="string">        :type b: str</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">return</span> bin(int(a, <span class="number">2</span>) + int(b, <span class="number">2</span>))[<span class="number">2</span>:]</span><br></pre></td></tr></table></figure>
