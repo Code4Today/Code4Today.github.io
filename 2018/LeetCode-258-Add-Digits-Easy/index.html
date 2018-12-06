@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="LeetCode," />
 
 
 
@@ -87,15 +87,16 @@
 
 
 <meta name="description" content="Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.  Example:  Input: 38 Output: 2  Explanation: The process is like: 3 + 8 = 11, 1 + 1 = 2.">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 258. Add Digits (Easy)">
+<meta property="og:title" content="*LeetCode 258. Add Digits (Easy)">
 <meta property="og:url" content="http://code4today.xyz/2018/LeetCode-258-Add-Digits-Easy/index.html">
 <meta property="og:site_name" content="Code4Today">
 <meta property="og:description" content="Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.  Example:  Input: 38 Output: 2  Explanation: The process is like: 3 + 8 = 11, 1 + 1 = 2.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-06T10:34:59.367Z">
+<meta property="og:updated_time" content="2018-12-06T10:35:57.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 258. Add Digits (Easy)">
+<meta name="twitter:title" content="*LeetCode 258. Add Digits (Easy)">
 <meta name="twitter:description" content="Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.  Example:  Input: 38 Output: 2  Explanation: The process is like: 3 + 8 = 11, 1 + 1 = 2.">
 
 
@@ -132,7 +133,7 @@
 
 
 
-  <title>LeetCode 258. Add Digits (Easy) | Code4Today</title>
+  <title>*LeetCode 258. Add Digits (Easy) | Code4Today</title>
   
 
 
@@ -300,7 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode 258. Add Digits (Easy)</h1>
+          <h1 class="post-title" itemprop="name headline">*LeetCode 258. Add Digits (Easy)</h1>
         
 
         <div class="post-meta">
@@ -312,7 +313,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-06T18:32:58+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-06T18:32:00+08:00">
                 2018-12-06
               </time>
             
@@ -322,6 +323,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -340,7 +363,7 @@
 
           
           
-             <span id="/2018/LeetCode-258-Add-Digits-Easy/" class="leancloud_visitors" data-flag-title="LeetCode 258. Add Digits (Easy)">
+             <span id="/2018/LeetCode-258-Add-Digits-Easy/" class="leancloud_visitors" data-flag-title="*LeetCode 258. Add Digits (Easy)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -381,7 +404,8 @@ Explanation: The process is like: 3 + 8 = 11, 1 + 1 = 2.
              Since 2 has only one digit, return it.
 Follow up:
 Could you do it without any loop/recursion in O(1) runtime?
-</code></pre><p>给出一个非负数，重复叠加它的所有数字，直到只剩一位数为止。</p>
+</code></pre><a id="more"></a>
+<p>给出一个非负数，重复叠加它的所有数字，直到只剩一位数为止。</p>
 <p>一种方法就是重复叠加，直到求出结果。另一种方法就是寻找规律，发现其实是求除9的余数，不过余数是0的时候应该返回9.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addDigits</span><span class="params">(self, num)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type num: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="comment"># self.testSet(self.apFormula2)</span></span><br><span class="line">        <span class="keyword">return</span> self.apFormula2(num)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apFormula2</span><span class="params">(self, num)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> num:</span><br><span class="line">            <span class="keyword">return</span> num - (num - <span class="number">1</span>) / <span class="number">9</span> * <span class="number">9</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apFormula</span><span class="params">(self, num)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> num:</span><br><span class="line">            <span class="keyword">return</span> (num - <span class="number">1</span>) % <span class="number">9</span> + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apBruteForce</span><span class="params">(self, num)</span>:</span></span><br><span class="line">        <span class="keyword">while</span> num &gt; <span class="number">9</span>:</span><br><span class="line">            num = num / <span class="number">10</span> + num % <span class="number">10</span></span><br><span class="line">        <span class="keyword">return</span> num</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">testSet</span><span class="params">(self, ap)</span>:</span></span><br><span class="line">        test_data = [</span><br><span class="line">            (<span class="number">0</span>, <span class="number">0</span>),</span><br><span class="line">            (<span class="number">38</span>, <span class="number">2</span>),</span><br><span class="line">            (<span class="number">487</span>, <span class="number">1</span>),</span><br><span class="line">            (<span class="number">9876</span>, <span class="number">3</span>),</span><br><span class="line">        ]</span><br><span class="line">        test_valid = <span class="keyword">True</span></span><br><span class="line">        <span class="keyword">for</span> test_itr <span class="keyword">in</span> test_data:</span><br><span class="line">            <span class="keyword">if</span> ap(test_itr[<span class="number">0</span>]) != test_itr[<span class="number">1</span>]:</span><br><span class="line">                <span class="keyword">print</span> <span class="string">'In:'</span>, test_itr[<span class="number">0</span>],<span class="string">'Out:'</span>, ap(test_itr[<span class="number">0</span>]), <span class="string">'Ans:'</span>, test_itr[<span class="number">1</span>]</span><br><span class="line">                test_valid = <span class="keyword">False</span></span><br><span class="line">        <span class="keyword">if</span> test_valid:</span><br><span class="line">            <span class="keyword">print</span> <span class="string">'All test has been passed.'</span></span><br></pre></td></tr></table></figure>
       
@@ -397,6 +421,12 @@ Could you do it without any loop/recursion in O(1) runtime?
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
+          
+        </div>
       
 
       
