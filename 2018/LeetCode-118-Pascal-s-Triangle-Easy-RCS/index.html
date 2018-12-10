@@ -86,18 +86,20 @@
 
 
 
-<meta name="description" content="Given a non-negative integer numRows, generate the first numRows of Pascal&amp;apos;s triangle.  ![pascalTriangle](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)  In Pasc">
+<meta name="description" content="Given a non-negative integer numRows, generate the first numRows of Pascal&amp;apos;s triangle.  In Pascal&amp;apos;s triangle, each number is the sum of the two numbers directly above it.  Example:  Input: 5">
 <meta name="keywords" content="LeetCode,RCS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="*LeetCode 118. Pascal&#39;s Triangle (Easy) RCS">
 <meta property="og:url" content="http://code4today.xyz/2018/LeetCode-118-Pascal-s-Triangle-Easy-RCS/index.html">
 <meta property="og:site_name" content="Code4Today">
-<meta property="og:description" content="Given a non-negative integer numRows, generate the first numRows of Pascal&amp;apos;s triangle.  ![pascalTriangle](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)  In Pasc">
+<meta property="og:description" content="Given a non-negative integer numRows, generate the first numRows of Pascal&amp;apos;s triangle.  In Pascal&amp;apos;s triangle, each number is the sum of the two numbers directly above it.  Example:  Input: 5">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-10T05:55:51.238Z">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif">
+<meta property="og:updated_time" content="2018-12-10T05:57:59.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="*LeetCode 118. Pascal&#39;s Triangle (Easy) RCS">
-<meta name="twitter:description" content="Given a non-negative integer numRows, generate the first numRows of Pascal&amp;apos;s triangle.  ![pascalTriangle](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)  In Pasc">
+<meta name="twitter:description" content="Given a non-negative integer numRows, generate the first numRows of Pascal&amp;apos;s triangle.  In Pascal&amp;apos;s triangle, each number is the sum of the two numbers directly above it.  Example:  Input: 5">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif">
 
 
 
@@ -395,10 +397,8 @@
 
       
         <pre><code>Given a non-negative integer numRows, generate the first numRows of Pascal&apos;s triangle.
-
-![pascalTriangle](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)
-
-In Pascal&apos;s triangle, each number is the sum of the two numbers directly above it.
+</code></pre><p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif" alt="pascal&#39;s triangle"></p>
+<pre><code>In Pascal&apos;s triangle, each number is the sum of the two numbers directly above it.
 
 Example:
 
@@ -411,7 +411,8 @@ Output:
   [1,3,3,1],
  [1,4,6,4,1]
 ]
-</code></pre><p>生成一个Pascal三角形。</p>
+</code></pre><a id="more"></a>
+<p>生成一个Pascal三角形。</p>
 <p>这题用迭代或循环即可。最后提供了一种简洁的用Map函数的解法。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generate</span><span class="params">(self, numRows)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type numRows: int</span></span><br><span class="line"><span class="string">        :rtype: List[List[int]]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">return</span> self.apMap(numRows)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apIterative</span><span class="params">(self, numRows)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> numRows == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            result = [[<span class="number">1</span>]]</span><br><span class="line">            <span class="keyword">for</span> itr <span class="keyword">in</span> range(<span class="number">1</span>, numRows):</span><br><span class="line">                result.append([<span class="number">1</span>])</span><br><span class="line">                <span class="keyword">for</span> col <span class="keyword">in</span> range(len(result[itr - <span class="number">1</span>]) - <span class="number">1</span>):</span><br><span class="line">                    result[itr].append(result[itr - <span class="number">1</span>][col] + result[itr - <span class="number">1</span>][col + <span class="number">1</span>])</span><br><span class="line">                result[itr].append(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> result</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apRecursive</span><span class="params">(self, numRows)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> numRows == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        <span class="keyword">elif</span> numRows == <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> [[<span class="number">1</span>]]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            result = self.apRecursive(numRows - <span class="number">1</span>)</span><br><span class="line">            result.append([<span class="number">1</span>] + [sum(result[<span class="number">-1</span>][i:i+<span class="number">2</span>]) <span class="keyword">for</span> i <span class="keyword">in</span> range((len(result[<span class="number">-1</span>]) - <span class="number">1</span>))] + [<span class="number">1</span>])</span><br><span class="line">            <span class="keyword">return</span> result</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apMap</span><span class="params">(self, numRows)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> numRows == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            result = [[<span class="number">1</span>]]</span><br><span class="line">            <span class="keyword">for</span> itr <span class="keyword">in</span> range(<span class="number">1</span>, numRows):</span><br><span class="line">                result += [map(<span class="keyword">lambda</span> x, y: x + y, [<span class="number">0</span>] + result[<span class="number">-1</span>], result[<span class="number">-1</span>] + [<span class="number">0</span>])]</span><br><span class="line">            <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
       
