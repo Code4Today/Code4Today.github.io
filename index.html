@@ -280,6 +280,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://code4today.xyz/2018/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-Easy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="duome">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Code4Today">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-Easy/" itemprop="url">*LeetCode 121. Best Time to Buy and Sell Stock (Easy)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-13T16:29:00+08:00">
+                2018-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-Easy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-Easy/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-Easy/" class="leancloud_visitors" data-flag-title="*LeetCode 121. Best Time to Buy and Sell Stock (Easy)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>Say you have an array for which the ith element is the price of a given stock on day i.
+
+If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+
+Note that you cannot sell a stock before you buy one.
+
+Example 1:
+
+Input: [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+             Not 7-1 = 6, as selling price needs to be larger than buying price.
+Example 2:
+
+Input: [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transaction is done, i.e. max profit = 0.
+</code></pre><p>有一个股价的数组，只能做一次交易，求最大利润。</p>
+<p>一种做法是记下当前为止的最小价格，然后将当前价格减去最小价格，比较交易利润。另一种是转化为最大子数列问题，用<a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98" target="_blank" rel="noopener">Kadane’s Algorithm</a>求解。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProfit</span><span class="params">(self, prices)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type prices: List[int]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="comment"># self.testSet(self.apKadane)</span></span><br><span class="line">        <span class="keyword">return</span> self.apKadane(prices)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apKadane</span><span class="params">(self, prices)</span>:</span></span><br><span class="line">        max_ending_here = max_so_far = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> itr <span class="keyword">in</span> range(<span class="number">1</span>, len(prices)):</span><br><span class="line">            max_ending_here = max(<span class="number">0</span>, max_ending_here + prices[itr] - prices[itr - <span class="number">1</span>])</span><br><span class="line">            max_so_far = max(max_so_far, max_ending_here)</span><br><span class="line">        <span class="keyword">return</span> max_so_far</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apCompareMin</span><span class="params">(self, prices)</span>:</span></span><br><span class="line">        re, min_price = <span class="number">0</span>, float(<span class="string">"inf"</span>)</span><br><span class="line">        <span class="keyword">for</span> price_itr <span class="keyword">in</span> prices:</span><br><span class="line">            min_price = min(min_price, price_itr)</span><br><span class="line">            re = max(re, price_itr - min_price)</span><br><span class="line">        <span class="keyword">return</span> re</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apBruteForce</span><span class="params">(self, prices)</span>:</span></span><br><span class="line">        re = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> start_itr <span class="keyword">in</span> range(len(prices) - <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> end_itr <span class="keyword">in</span> range(start_itr + <span class="number">1</span>, len(prices)):</span><br><span class="line">                re = max(prices[end_itr] - prices[start_itr], re)</span><br><span class="line">        <span class="keyword">return</span> re</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">testSet</span><span class="params">(self, ap)</span>:</span></span><br><span class="line">        test_data = [</span><br><span class="line">            ([], <span class="number">0</span>),</span><br><span class="line">            ([<span class="number">3</span>], <span class="number">0</span>),</span><br><span class="line">            ([<span class="number">7</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">4</span>], <span class="number">5</span>),</span><br><span class="line">            ([<span class="number">7</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">1</span>], <span class="number">0</span>),</span><br><span class="line">            ([<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">9</span>], <span class="number">8</span>),</span><br><span class="line">        ]</span><br><span class="line">        test_passed = <span class="keyword">True</span></span><br><span class="line">        <span class="keyword">for</span> test_itr <span class="keyword">in</span> test_data:</span><br><span class="line">            <span class="keyword">if</span> ap(test_itr[<span class="number">0</span>]) != test_itr[<span class="number">1</span>]:</span><br><span class="line">                test_passed = <span class="keyword">False</span></span><br><span class="line">                <span class="keyword">print</span> <span class="string">'In:'</span>, test_data[<span class="number">0</span>], <span class="string">'Out:'</span>, ap(test_data[<span class="number">0</span>]), <span class="string">'Ans:'</span>, test_data[<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">if</span> test_passed:</span><br><span class="line">            <span class="keyword">print</span> <span class="string">'All test has been passed.'</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://code4today.xyz/2018/LeetCode-119-Pascal-s-Triangle-II-Easy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1879,184 +2060,11 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://code4today.xyz/2018/LeetCode-101-Symmetric-Tree-Easy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="duome">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Code4Today">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/LeetCode-101-Symmetric-Tree-Easy/" itemprop="url">LeetCode 101. Symmetric Tree (Easy) BFS DFS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-28T23:09:00+08:00">
-                2018-11-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/LeetCode-101-Symmetric-Tree-Easy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/LeetCode-101-Symmetric-Tree-Easy/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/LeetCode-101-Symmetric-Tree-Easy/" class="leancloud_visitors" data-flag-title="LeetCode 101. Symmetric Tree (Easy) BFS DFS">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).</p>
-<p>For example, this binary tree [1,2,2,3,4,4,3] is symmetric:</p>
-<p>But the following [1,2,2,null,3,null,3] is not:</p>
-<p>Note:</p>
-<p>Bonus points if you could solve it both recursively and iteratively.</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/LeetCode-101-Symmetric-Tree-Easy/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2102,7 +2110,7 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
